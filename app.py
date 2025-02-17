@@ -159,7 +159,7 @@ with col1:
                  st.error("Nessuna conversazione trovata")
 
 with col2:
-    if st.button("Estrai contatti"):
+    if st.button("Estrai contatti e informazioni"):
         transcript = st.session_state.get("transcript", [])
         if transcript:
             # Filtra solo i messaggi dell'utente
@@ -168,10 +168,12 @@ with col2:
             if transcript_text.strip():
                 prompt_template = """
 Analizza la seguente trascrizione di una conversazione tra un utente e un agente virtuale.
-Estrai, se presenti, l'indirizzo email e il numero di telefono dell'utente.
+Estrai, se presenti, l'indirizzo email e il numero di telefono dell'utente e un Riassumi con tutti i dettagli rilevanti per la richiesta di un mutuo.
 Rispondi nel seguente formato:
 Email: <indirizzo email>
 Telefono: <numero di telefono>
+Riassunto: <riassunto dettagliato>
+
 Se non trovi alcun dato, indica "Non trovato".
 Se vedi qualche termine simile a "chiocciola" si tratta di un'email e cambiala con il carattere "@".
 
