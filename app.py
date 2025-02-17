@@ -168,7 +168,7 @@ with col2:
             if transcript_text.strip():
                 prompt_template = """
 Analizza la seguente trascrizione di una conversazione tra un utente e un agente virtuale.
-Estrai, se presenti, l'indirizzo email e il numero di telefono dell'utente e un Riassumi con tutti i dettagli rilevanti per la richiesta di un mutuo.
+Estrai, se presenti, l'indirizzo email e il numero di telefono dell'utente e un Riassumi dettagliatamente in maniera strutturata con tutti i dettagli rilevanti per la richiesta di un mutuo.
 Rispondi nel seguente formato:
 Email: <indirizzo email>
 Telefono: <numero di telefono>
