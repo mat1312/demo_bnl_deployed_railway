@@ -31,7 +31,7 @@ embeddings = OpenAIEmbeddings()
 vector_store = FAISS.load_local(persist_directory, embeddings, allow_dangerous_deserialization=True)
 
 # Inizializza il modello LLM e la catena di RetrievalQA (con ritorno dei documenti sorgente)
-llm = ChatOpenAI(temperature=0.1, model="gpt-4o-mini")
+llm = ChatOpenAI(temperature=0.1, model="gpt-4o")
 qa_chain = RetrievalQA.from_chain_type(
     llm=llm,
     chain_type="stuff",
